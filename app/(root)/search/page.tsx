@@ -1,7 +1,11 @@
-import React from "react";
+import SearchCommand from "@/components/SearchCommand";
 
 const Search = () => {
-  return <div>this is search page</div>;
+  return (
+    <div>
+      <SearchCommand />
+    </div>
+  );
 };
 
 export default Search;

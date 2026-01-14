@@ -1,7 +1,7 @@
 "use server";
 
 import { getDateRange, validateArticle, formatArticle } from "@/lib/utils";
-import { POPULAR_STOCK_SYMBOLS } from "@/lib/constants";
+import { POPULAR_STOCK_SYMBOLS } from "../contants";
 import { cache } from "react";
 
 const FINNHUB_BASE_URL = "https://finnhub.io/api/v1";
@@ -128,7 +128,7 @@ export const searchStocks = cache(
 
       if (!trimmed) {
         // Fetch top 10 popular symbols' profiles
-        const top = POPULAR_STOCK_SYMBOLS.slice(0, 10);
+        const top = POPULAR_STOCK_SYMBOLS.slice(0, 30);
         const profiles = await Promise.all(
           top.map(async (sym) => {
             try {
