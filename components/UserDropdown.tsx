@@ -28,7 +28,12 @@ const UserDropdown = ({ user }: { user: User }) => {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost">
           {" "}
-          <Avatar className="h-10 w-10">
+          <div className="bg-orange-500 h-[35px] w-[35px] rounded-[50%] flex items-center justify-center">
+            <span className="text-purple-700 font-bold text-xl">
+              {user.name[0]}
+            </span>
+          </div>
+          {/* <Avatar className="h-10 w-10">
             <AvatarImage
               src="https://jsmastery.com/_next/image?url=%2Fassets%2Fgeneral%2Fimages%2Fjsm-logo.webp&w=3840&q=75"
               alt="@shadcn"
@@ -36,7 +41,7 @@ const UserDropdown = ({ user }: { user: User }) => {
             <AvatarFallback className="bg-yellow-400 text-yellow-900 font-bold text-sm">
               {user.name[0]}
             </AvatarFallback>
-          </Avatar>
+          </Avatar> */}
           <div className="hidden md:flex flex-col items-start">
             <span className="text-base font-medium text-gray-400">
               {user.name}
@@ -47,7 +52,12 @@ const UserDropdown = ({ user }: { user: User }) => {
       <DropdownMenuContent className="text-gray-400">
         <DropdownMenuLabel>
           <div className="flex relative items-center gap-3 py-2">
-            <Avatar className="h-10 w-10">
+            <div className="bg-orange-500 h-[35px] w-[35px] rounded-[50%] flex items-center justify-center">
+              <span className="text-purple-700 font-bold text-xl">
+                {user.name[0]}
+              </span>
+            </div>
+            {/* <Avatar className="h-10 w-10">
               <AvatarImage
                 src="https://jsmastery.com/_next/image?url=%2Fassets%2Fgeneral%2Fimages%2Fjsm-logo.webp&w=3840&q=75"
                 alt="@shadcn"
@@ -55,7 +65,7 @@ const UserDropdown = ({ user }: { user: User }) => {
               <AvatarFallback className="bg-yellow-400 text-yellow-900 font-bold text-sm">
                 {user.name[0]}
               </AvatarFallback>
-            </Avatar>
+            </Avatar> */}
             <div className="flex flex-col">
               <span className="text-base font-medium text-gray-400">
                 {user.name}

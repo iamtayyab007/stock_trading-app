@@ -102,7 +102,7 @@ const SearchCommand = () => {
               ) : null}
             </CommandEmpty>
 
-            <CommandGroup heading="Popular stocks 10">
+            <CommandGroup heading={`Popular stocks ${initialStocks.length}`}>
               {debouncedValue
                 ? searchResult.map((item) => (
                     <CommandItem
@@ -140,7 +140,11 @@ const SearchCommand = () => {
                       </div>
 
                       <div className="flex flex-col">
-                        <span>{item.name}</span>
+                        <span>
+                          <Link href={`stocks/${item.symbol}`}>
+                            {item.name}
+                          </Link>
+                        </span>
                         <span className="text-gray-500">
                           {item.symbol} | {item.exchange} | {item.type}
                         </span>
