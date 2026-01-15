@@ -30,7 +30,7 @@ const UserDropdown = ({ user }: { user: User }) => {
           {" "}
           <div className="bg-orange-500 h-[35px] w-[35px] rounded-[50%] flex items-center justify-center">
             <span className="text-purple-700 font-bold text-xl">
-              {user.name[0]}
+              {user.name[0].toUpperCase()}
             </span>
           </div>
           {/* <Avatar className="h-10 w-10">
@@ -54,7 +54,7 @@ const UserDropdown = ({ user }: { user: User }) => {
           <div className="flex relative items-center gap-3 py-2">
             <div className="bg-orange-500 h-[35px] w-[35px] rounded-[50%] flex items-center justify-center">
               <span className="text-purple-700 font-bold text-xl">
-                {user.name[0]}
+                {user.name[0].toUpperCase()}
               </span>
             </div>
             {/* <Avatar className="h-10 w-10">
