@@ -34,9 +34,9 @@ export const signUpWithEmail = async ({
       });
     }
     return { success: true, data: response };
-  } catch (error) {
+  } catch (error: any) {
     console.log("Sign up failed", error);
-    return { success: false, error: "Sign Up failed" };
+    return { success: false, error: error.message };
   }
 };
 
@@ -59,8 +59,8 @@ export const signInWithEmail = async ({ email, password }: SignInFormData) => {
     });
 
     return { success: true, data: response };
-  } catch (error) {
+  } catch (error: any) {
     console.log("Sign In failed", error);
-    return { success: false, error: "Sign In failed" };
+    return { success: false, error: error.message };
   }
 };
